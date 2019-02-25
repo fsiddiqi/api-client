@@ -26,7 +26,6 @@ app.get('/', function (req, res) {
 
 });
 
-
 // use res.render to load up an ejs view file index page
 app.get('/quotes/:quoteID', function (req, res) {
   var quoteID = req.params.quoteID;
@@ -43,8 +42,9 @@ app.get('/quotes/:quoteID', function (req, res) {
 
 });
 
-
-app.use('/output', express.static('../output'));
+app.get('/about', function (req, res) {
+  res.render('pages/about');
+});
 
 app.listen(3000);
 console.log('3000 is the magic port');
