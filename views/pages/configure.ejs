@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <p>
+                Start by uploading your 60 second video
+            </p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">1. Upload</button>
+                <button type="button" class="btn btn-primary">2. Configure</button>
+                <button type="button" class="btn btn-default">3. Render</button>
+                <button type="button" class="btn btn-default">4. Preview</button>
+            </div>
+            <p>
+
+                <form role="form" method='post' action='render' name="theInput">
+                    <div class="form-group">
+                        <label for="videoName">What's your video called?</label>
+                        <input class="form-control" type='text' name='videoName' value="<%= originalName %>">
+                        <input type='hidden' name='fileName' value="<%= filename %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="subtitles">Add subtitles</label>
+                        <textarea class="form-control" id="subtitles" name='subtitles'><%= sampleSubtitles %></textarea>
+                        <p class="help-block">This is a sample to get you started</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="countdownStart">At how many seconds should I start the countdown?</label>
+                        <input class="form-control" type='text' name='countdownStart' value="10">
+                        <p class="help-block">Number of seconds at which the clock should start</p>
+                    </div>
+                    <input type='submit' value="Next">
+                </form>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "techcom2019-developer-central",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.dxc.com/fsiddiqi/techcom-2019"
+  },
+  "author": "Faisal Siddiqi",
+  "bugs": {
+    "url": "https://github.dxc.com/fsiddiqi/techcom-2019/issues"
+  },
+  "homepage": "https://github.dxc.com/fsiddiqi/techcom-2019#readme",
+  "dependencies": {
+    "request": "latest",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "nodemon": "^1.18.6"
+  }
+}

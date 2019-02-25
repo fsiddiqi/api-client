@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<title>Techcom24 2019 :: Developer Central</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<style>
+	body {
+		padding-top: 50px;
+	}
+
+	.loader {
+		display: none;
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+	}
+
+	textarea#subtitles {
+		height: 200px;
+		font-size: 10pt;
+	}
+
+	.jumbotron .help-block {
+		font-size: 9pt;
+	}
+
+	.loaded {
+		display: none;
+	}
+
+	/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+	body.loading .loader {
+		overflow: hidden;
+	}
+
+	/* Anytime the body has the loading class, our
+   modal element will be visible */
+	body.loading .loader {
+		display: block;
+	}
+
+	@keyframes spin {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+</style>

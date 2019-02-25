@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+
+        <form>
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" id="first_name" value="<%=state.first_name %>" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="last_name" class="form-control" id="last_name" value="<%=state.last_name %>" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+                <label for="coverage">Coverage</label>
+                <input type="text" class="form-control" id="coverage" value="<%=state.coverage %>" placeholder="Coverage">
+            </div>
+            <div class="form-group">
+                <label for="Purpose">Purpose</label>
+                <input type="purpose" class="form-control" id="purpose" value="<%=state.purpose %>" placeholder="Purpose">
+            </div>
+            <div class="form-group">
+                <label for="Purpose">Quote Date</label>
+                <input type="quote_date" class="form-control" id="quote_date" value="<%=state.quote_date %>"
+                    placeholder="Quote Date">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $('table.quotes tr').click(function () {
+                var quoteID = $(this).attr('id');
+                console.log(quoteID);
+                var theHref = "/quotes/" + quoteID;
+                window.location = theHref;
+            });
+
+        });
+    </script>
+</body>
+
+</html>
